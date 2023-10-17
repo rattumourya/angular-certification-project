@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-center mt-4">
+    <div class="bg-light border rounded bg-gradient w-75">
+        <ul class="nav justify-content-center">
+            <li class="nav-item" *ngFor="let obj of leagueCountries">
+                <a [ngClass]="{'selectedCountryCss': selectedCountry == obj.countryName}"
+                    (click)="selectedCountryFn(obj.countryName)"
+                    [attr.id]=" (obj.countryName | lowercase) + 'Select'" class="nav-link countrySelectCss"
+                    aria-current="page">{{ obj.countryName }}</a>
+            </li>
+        </ul>
+    </div>
+</div>

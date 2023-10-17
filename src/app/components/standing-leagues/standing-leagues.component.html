@@ -1,0 +1,36 @@
+<app-header [selectedCountry]="selectedCountry"></app-header>
+
+<!-- standings of the top league -->
+<div class="container d-flex justify-content-center mt-4">
+    <div class="rounded w-75" >
+        <table *ngIf="standings.length!=0" class="table table-bordered minHeight">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Games</th>
+                    <th scope="col">W</th>
+                    <th scope="col">L</th>
+                    <th scope="col">D</th>
+                    <th scope="col">Goal Difference</th>
+                    <th scope="col">Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let standing of standings.slice(0, 10)">
+                    <th class="text-center" scope="row">{{ standing.rank }}</th>
+                    <td class="text-center"><img [src]="standing.team.logo" class="small-image" alt="logo"></td>
+                    <td><a class="teamNameCss" (click)="redirectToResultScreen(standing.team.id)">{{ standing.team.name }}</a></td>
+                    <td>{{ standing.all.played }}</td>
+                    <td>{{ standing.all.win }}</td>
+                    <td>{{ standing.all.lose }}</td>
+                    <td>{{ standing.all.draw }}</td>
+                    <td>{{ standing.goalsDiff }}</td>
+                    <td>{{ standing.points }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <app-spinner *ngIf="standings.length==0"></app-spinner>
+    </div>
+</div>

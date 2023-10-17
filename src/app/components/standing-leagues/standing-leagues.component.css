@@ -1,0 +1,28 @@
+.small-image {
+    max-width: 25px;
+    height: auto; 
+}
+
+.nav-item a {
+  cursor: pointer;
+}
+
+.teamNameCss {
+  color: #000;
+  text-decoration: unset;
+  cursor: pointer;
+}
+
+.teamNameCss:focus {
+  text-decoration: underline;
+  color: blue;
+}
+
+.teamNameCss:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.minHeight {
+  min-height: 561px;
+}
