@@ -20,7 +20,7 @@ export class HttpServices {
 
   private getCurrentSeason() {
     const currentDate: Date = new Date();
-    return currentDate.getFullYear();
+    return 2023;
   }
 
   getStandingsOfTopLeague(leagueId: number) {
