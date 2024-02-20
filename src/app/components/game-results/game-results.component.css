@@ -1,0 +1,8 @@
+.small-image {
+    max-width: 25px;
+    height: auto; 
+  }
+
+.minHeight {
+  min-height: 445px;
+}

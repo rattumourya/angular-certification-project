@@ -1,0 +1,19 @@
+.countrySelectCss {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .countrySelectCss:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .selectedCountryCss {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .nav-item a {
+    cursor: pointer;
+  }
+  

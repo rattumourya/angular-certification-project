@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center mt-2">
+    <div class="rounded border w-75 minHeight" >
+        <table *ngIf="fixureArr.length!=0" class="table table-borderless">
+            <tbody>
+                <tr *ngFor="let fixture  of fixureArr">
+                    <td class="text-center"><img  class="small-image" [src]="fixture.teams.home.logo" alt="logo"></td>
+                    <td class="text-center">{{fixture.teams.home.name}}</td>
+                    <td class="text-center">{{fixture.goals.home}}</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">{{fixture.goals.away}}</td>
+                    <td class="text-center">{{fixture.teams.away.name}}</td>
+                    <td class="text-center"><img  class="small-image" [src]="fixture.teams.away.logo" alt="logo"></td>
+                </tr>
+            </tbody>
+        </table>
+        <app-spinner *ngIf="fixureArr.length==0"></app-spinner>
+    </div>
+</div>
+<div class="container d-flex justify-content-center  mt-1">
+    <div class="w-75">
+        <button type="button" class="btn btn-sm btn-primary" (click)="backHandler()">BACK</button>
+    </div>
+</div>
